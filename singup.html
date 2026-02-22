@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow SLK - Login & Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="singup.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box login">
+            <h2 class="glow-text">LOGIN</h2>
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">ENTER</button>
+                <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+            </form>
+        </div>
+
+        <div class="form-box signup" style="display: none;">
+            <h2 class="glow-text">SIGN UP</h2>
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Email Address</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <button type="submit" class="btn">CREATE ACCOUNT</button>
+                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const loginBox = document.querySelector('.login');
+        const signupBox = document.querySelector('.signup');
+        const signupLink = document.querySelector('.signup-link');
+        const loginLink = document.querySelector('.login-link');
+
+        signupLink.onclick = () => {
+            loginBox.style.display = 'none';
+            signupBox.style.display = 'block';
+        }
+
+        loginLink.onclick = () => {
+            signupBox.style.display = 'none';
+            loginBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
