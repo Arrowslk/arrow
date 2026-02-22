@@ -208,4 +208,83 @@ header{
 }
 sub{
     font-size: medium;
+
 }
+@media (max-width: 768px) {
+    .home-img {
+        display: flex;
+        justify-content: center; /* හරස් අතට මැදට ගැනීමට */
+        align-items: center;    /* සිරස් අතට මැදට ගැනීමට */
+        margin-top: 2rem;       /* අකුරු වල ගෑවෙන්නේ නැතිව ඉඩ තැබීමට */
+    }
+
+    /* පින්තූරය වටා ඇති රවුම් බොක්ස් එක */
+    .home-img .img-box {
+        width: 250px;  /* මොබයිල් එකට ගැලපෙන උස සහ පළල */
+        height: 250px;
+        border-radius: 50%; /* රවුමක් ලෙස පෙන්වීමට */
+        border: 4px solid var(--main-color);
+        box-shadow: 0 0 20px var(--main-color);
+        overflow: hidden; /* පින්තූරය රවුමෙන් පිටතට ඒම වැළැක්වීමට */
+    }
+
+    /* ඇත්තම පින්තූරය (me.png) */
+    .home-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* පින්තූරය ඇදී යන්නේ නැතිව බොක්ස් එකට ගැලපීමට */
+    }
+    header {
+        position: relative; /* Fixed එක අයින් කළාම අකුරු වැහෙන්නේ නැහැ */
+        padding: 1.5rem 5%;
+        display: flex;
+        flex-direction: column; /* Logo එක උඩ, Menu එක පල්ලෙහා */
+        align-items: center;
+        height: auto;
+        background: var(--bg-color); /* පාරදෘශ්‍ය ගතිය අයින් කර පසුබිම පැහැදිලි කළා */
+    }
+
+    .logo {
+        font-size: 2rem;
+        margin-bottom: 1rem; /* Logo එක සහ Menu එක අතර පරතරය */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row; /* පේළියට අකුරු ටික තබා ගැනීමට */
+        flex-wrap: wrap;    /* ඉඩ මදි නම් ඉබේම පල්ලෙහාට යන්න */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 0.9rem; /* අකුරු පොඩ්ඩක් කුඩා කළා */
+    }
+
+    .home {
+        padding-top: 2rem; /* Header එක අසලටම එන එක වැළැක්වීමට */
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 2.8rem;
+        margin: 1rem 0;
+    }
+
+    .home-img .img-box {
+        width: 250px; /* පින්තූරය නිශ්චිත ප්‍රමාණයකට හැදුවා */
+        height: 250px;
+        margin: 0 auto;
+    }
+}
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
